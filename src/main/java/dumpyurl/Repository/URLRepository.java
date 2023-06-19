@@ -2,8 +2,13 @@ package dumpyurl.Repository;
 
 import dumpyurl.Model.URLModel;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.stereotype.Repository;
 
-public interface URLRepository extends MongoRepository<URLModel, Integer> {
+import java.util.List;
+import java.util.UUID;
 
-    public URLModel findByShortURL(String shortURL);
+
+public interface URLRepository extends MongoRepository<URLModel, String> {
+    List<URLModel> findByShorturl(String shorturl);
 }

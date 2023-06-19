@@ -1,15 +1,22 @@
 package dumpyurl.Model;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
+
+import java.util.UUID;
 
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Getter
+@Setter
+@Document(collection = "URLModel")
+@Data
 public class URLModel {
 
-    private int Id;
-    private String longURL;
-    private String shortURL;
-    private String error;
+    @org.springframework.data.annotation.Id
+    private String id;
+    private String shorturl;
+    private String longurl;
+
 }
