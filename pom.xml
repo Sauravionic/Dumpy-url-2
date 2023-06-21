@@ -87,6 +87,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>Dumpy-url-2</finalName>
     </build>
 
 </project>
